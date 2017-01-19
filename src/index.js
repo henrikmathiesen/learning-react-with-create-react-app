@@ -9,4 +9,4 @@ ReactDOM.render(
 );
 
 
-// This is the application starting point
+// This is the application starting point.
