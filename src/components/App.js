@@ -5,8 +5,8 @@ import './App.css';
 const App = () => {
     return(
         <div className="App">
-            <HelloWorld />
-            <HelloWorld />
+            <HelloWorld name="JavaScript" />
+            <HelloWorld name="React" />
         </div>
     );
 }
