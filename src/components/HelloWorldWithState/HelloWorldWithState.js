@@ -3,13 +3,14 @@ import './HelloWorldWithState.css';
 
 class HelloWorldWithState extends Component {
 
-    // constructor(props) {
-    //     super(props);
-    // }
+    constructor(props) {
+        super(props);
+        this.state = { greeting: 'Hello' };
+    }
 
     render() {
         return (
-            <div className="HelloWorldWithState">Hello {this.props.name} World!</div>
+            <div className="HelloWorldWithState">{this.state.greeting} {this.props.name} World!</div>
         );
     }
 }
@@ -28,3 +29,6 @@ export default HelloWorldWithState;
 // constructor(props) {
 //  super(props);
 // }
+
+// HOWEVER
+// If we use state, we set that up in the constructor
