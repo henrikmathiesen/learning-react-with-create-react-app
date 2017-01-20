@@ -5,7 +5,7 @@ class HelloWorldWithState extends Component {
 
     constructor(props) {
         super(props);
-        this.state = { greeting: 'Hello' };
+        this.state = { greeting: 'Hello there' };
     }
 
     render() {
