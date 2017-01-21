@@ -5,11 +5,17 @@ class AddGreeter extends Component {
     constructor(props) {
         super(props);
         this.state = { greetingName: '' };
-        this.handleUpdate = this.handleUpdate.bind(this);
+        this.handleUpdate = this.handleUpdate.bind(this);   // *
+        this.addGreeting = this.addGreeting.bind(this);     // *
     }
 
     handleUpdate(event) {
         this.setState({ greetingName: event.target.value });
+    }
+
+    addGreeting() {
+        this.props.addGreeting(this.state.greetingName);
+        this.setState({ greetingName: '' });
     }
 
     render() {
@@ -17,10 +23,13 @@ class AddGreeter extends Component {
             <div className="AddGreeter">
                 <input type="text" onChange={this.handleUpdate} />
                 &nbsp;&nbsp;
-                <button>Add</button>
+                <button onClick={this.addGreeting}>Add</button>
             </div>
         );
     }
 }
 
 export default AddGreeter;
+
+// addGreeting is calling function sent down via props
+// * We need this bindings since these are events in this class
