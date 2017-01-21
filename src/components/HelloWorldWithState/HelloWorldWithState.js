@@ -31,4 +31,4 @@ export default HelloWorldWithState;
 // }
 
 // HOWEVER
-// If we use state, we set that up in the constructor
+// If we use state, we set that up in the constructor, lite above
