@@ -6,11 +6,24 @@ class HelloWorldWithState extends Component {
     constructor(props) {
         super(props);
         this.state = { greeting: 'Hello there' };
+
+        this.french = this.french.bind(this);
+    }
+
+    french() {
+        this.setState({ greeting: 'Bonjour' });
     }
 
     render() {
         return (
-            <div className="HelloWorldWithState">{this.state.greeting} {this.props.name} World!</div>
+            <div className="HelloWorldWithState">
+                <div>
+                    {this.state.greeting} {this.props.name} World!
+                </div>
+                <div>
+                    <button onClick={this.french}>Frenchify!</button>
+                </div>
+            </div>
         );
     }
 }
@@ -33,3 +46,6 @@ export default HelloWorldWithState;
 
 // HOWEVER
 // If we use state, we set that up in the constructor, lite above
+
+// Changing state
+// Any state changes NEED to happen via the this.setState function
