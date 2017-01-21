@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import HelloWorldWithState from '../HelloWorldWithState/HelloWorldWithState';
+import AddGreeter from '../AddGreeter/AddGreeter';
 
 class HelloWorldList extends Component {
 
@@ -21,7 +22,8 @@ class HelloWorldList extends Component {
 
     render() {
         return (
-            <div className="HelloWorldList">
+            <div>
+                <AddGreeter />
                 {this.renderGreetings()}
             </div>
         );
