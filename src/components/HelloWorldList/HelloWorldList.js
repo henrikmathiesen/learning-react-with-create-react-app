@@ -8,7 +8,8 @@ class HelloWorldList extends Component {
         this.state = {
             greetings: [
                 'Adam',
-                'Bertil'
+                'Bertil',
+                'Ceasar'
             ]
         };
 
