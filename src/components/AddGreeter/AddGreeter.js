@@ -21,7 +21,7 @@ class AddGreeter extends Component {
     render() {
         return (
             <div className="AddGreeter">
-                <input type="text" onChange={this.handleUpdate} />
+                <input type="text" value={this.state.greetingName} onChange={this.handleUpdate} />
                 &nbsp;&nbsp;
                 <button onClick={this.addGreeting}>Add</button>
             </div>
