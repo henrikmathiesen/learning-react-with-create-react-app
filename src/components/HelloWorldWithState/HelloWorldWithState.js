@@ -6,11 +6,16 @@ class HelloWorldWithState extends Component {
     constructor(props) {
         super(props);
         this.state = { greeting: 'Hello there' };
-        this.french = this.french.bind(this); // *
+        this.french = this.french.bind(this);                   // *
+        this.removeGreeting = this.removeGreeting.bind(this);   // *
     }
 
     french() {
         this.setState({ greeting: 'Bonjour' });
+    }
+
+    removeGreeting(){
+        this.props.removeGreeting(this.props.name);
     }
 
     render() {
@@ -21,6 +26,7 @@ class HelloWorldWithState extends Component {
                 </div>
                 <div>
                     <button onClick={this.french}>Frenchify!</button>
+                    <button onClick={this.removeGreeting}>Remove</button>
                 </div>
             </div>
         );
@@ -50,3 +56,4 @@ export default HelloWorldWithState;
 // Any state changes NEED to happen via the this.setState function
 
 // * This tells Javascript "Hey, any time you see a reference to this inside of the frenchify function, I want you specifically to refer to ME."
+// * Same with removeGreeting

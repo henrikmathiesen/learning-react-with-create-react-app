@@ -15,12 +15,13 @@ class HelloWorldList extends Component {
             ]
         };
 
-        this.addGreeting = this.addGreeting.bind(this); // *
+        this.addGreeting = this.addGreeting.bind(this);         // *
+        this.removeGreeting = this.removeGreeting.bind(this);   // *
 
     }
 
     renderGreetings() {
-        return this.state.greetings.map(name => <HelloWorldWithState key={name} name={name} />);
+        return this.state.greetings.map(name => <HelloWorldWithState key={name} name={name} removeGreeting={this.removeGreeting} />);
     }
 
     addGreeting(newName) {
@@ -31,6 +32,11 @@ class HelloWorldList extends Component {
 
         // This is however cleaner, using the spread operator that returns a new array
         this.setState({ greetings: [...this.state.greetings, newName] });
+    }
+
+    removeGreeting(removeName) {
+        const filteredGreetings = this.state.greetings.filter(name => name !== removeName);
+        this.setState({ greetings: filteredGreetings });
     }
 
     render() {
@@ -49,4 +55,4 @@ export default HelloWorldList;
 // We also need to set an unique key so React can seperate the items in the loop.
 
 // * We dont need to renderGreetings = renderGreetings.bind(this), since its not a callback from event.
-// * We need it on addGreeting though, since it has a bind in the child component.
+// * We need it on addGreeting and removeGreeting though, since it has a bind in the child component.
