@@ -21,6 +21,7 @@ export default HelloWorldWithState;
 // Import the default export from 'react' in node_modules as React.
 // Also import named export Component from 'react'.
 // We use a class here, because this component focuses on more than just rendering content.
+// We need to define a render function in our class for rendering JSX.
 // This component can also get props passed to it, but since this is a class we get those in the constructor,
 // that means that we have to use this.props.name instead of props.name
 
