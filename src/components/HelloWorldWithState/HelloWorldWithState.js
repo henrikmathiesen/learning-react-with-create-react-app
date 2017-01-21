@@ -6,7 +6,6 @@ class HelloWorldWithState extends Component {
     constructor(props) {
         super(props);
         this.state = { greeting: 'Hello there' };
-
         this.french = this.french.bind(this); // *
     }
 

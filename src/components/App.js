@@ -1,6 +1,6 @@
 import React from 'react';
+import HelloWorldList from './HelloWorldList/HelloWorldList';
 import HelloWorld from './HelloWorld/HelloWorld';
-import HelloWorldWithState from './HelloWorldWithState/HelloWorldWithState';
 import './App.css';
 
 const App = () => {
@@ -8,7 +8,7 @@ const App = () => {
         <div className="App">
             <HelloWorld name="JavaScript" />
             <HelloWorld name="React" />
-            <HelloWorldWithState name="Angular" />
+            <HelloWorldList />
         </div>
     );
 }
@@ -21,4 +21,4 @@ export default App;
 // Here we use the functional style for the component, instead of classes,
 // this is preferable when the component is focused on presentation rather than state and logic.
 // The App Component renders 2 HelloWorld components, sending in arguments as props.
-// The App Component also renders 1 HelloWorldWithState component, sending in arguments as props.
+// The App Component also renders 1 HelloWorldList
