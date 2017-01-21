@@ -26,15 +26,22 @@ class HelloWorldList extends Component {
 
     addGreeting(newName) {
         // We can not modify state directly (we must use setState), but could do it like this
-        //var greetings = this.state.greetings;
-        //greetings.push(newName);
-        //this.setState({ greetings: greetings });
+        // const greetings = this.state.greetings;
+        // greetings.push(newName);
+        // this.setState({ greetings: greetings });
 
         // This is however cleaner, using the spread operator that returns a new array
         this.setState({ greetings: [...this.state.greetings, newName] });
     }
 
     removeGreeting(removeName) {
+        // We could do it like this
+        // const greetings = this.state.greetings;
+        // const indexToRemove = greetings.indexOf(removeName);
+        // greetings.splice(indexToRemove, 1);
+        // this.setState({ greetings: greetings });
+
+        // This is cleaner
         const filteredGreetings = this.state.greetings.filter(name => name !== removeName);
         this.setState({ greetings: filteredGreetings });
     }
