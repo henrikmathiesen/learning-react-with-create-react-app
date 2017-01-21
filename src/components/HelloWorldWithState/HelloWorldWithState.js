@@ -7,7 +7,7 @@ class HelloWorldWithState extends Component {
         super(props);
         this.state = { greeting: 'Hello there' };
 
-        this.french = this.french.bind(this);
+        this.french = this.french.bind(this); // *
     }
 
     french() {
@@ -49,3 +49,5 @@ export default HelloWorldWithState;
 
 // Changing state
 // Any state changes NEED to happen via the this.setState function
+
+// * This tells Javascript "Hey, any time you see a reference to this inside of the frenchify function, I want you specifically to refer to ME."
