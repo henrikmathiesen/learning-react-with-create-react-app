@@ -1,0 +1,21 @@
+exports[`HelloWorldWithState Renders and matches our snapshot 1`] = `
+<div
+  className="HelloWorldWithState">
+  <div>
+    Hello there
+     
+    Person
+     World!
+  </div>
+  <div>
+    <button
+      onClick={[Function]}>
+      Frenchify!
+    </button>
+    <button
+      onClick={[Function]}>
+      Remove
+    </button>
+  </div>
+</div>
+`;
