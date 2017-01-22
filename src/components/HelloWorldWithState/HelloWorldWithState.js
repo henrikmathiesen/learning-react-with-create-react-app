@@ -27,8 +27,8 @@ class HelloWorldWithState extends Component {
                     {this.state.greeting} {this.props.name} World!
                 </div>
                 <div>
-                    <button onClick={this.french}>Frenchify!</button>
-                    <button onClick={this.removeGreeting}>Remove</button>
+                    <button className="ts-french" onClick={this.french}>Frenchify!</button>
+                    <button className="ts-remove" onClick={this.removeGreeting}>Remove</button>
                 </div>
             </div>
         );
@@ -59,3 +59,6 @@ export default HelloWorldWithState;
 
 // * This tells Javascript "Hey, any time you see a reference to this inside of the frenchify function, I want you specifically to refer to ME."
 // * Same with removeGreeting
+
+
+// About the ts-french and ts-remove classes, we prefix them with ts to tell that it is a unit test hook and not styling
