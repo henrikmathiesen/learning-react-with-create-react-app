@@ -22,7 +22,7 @@ class HelloWorldList extends Component {
     }
 
     renderGreetings() {
-        return this.state.greetings.map(name => <HelloWorldWithState key={name} name={name} removeGreeting={this.removeGreeting} />);
+        return this.state.greetings.map((name, i) => <HelloWorldWithState key={i} name={name} removeGreeting={this.removeGreeting} />);
     }
 
     addGreeting(newName) {
