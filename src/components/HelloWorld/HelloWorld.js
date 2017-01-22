@@ -3,7 +3,7 @@ import './HelloWorld.css';
 
 const HelloWorld = (props) => {
     return(
-        <div className="HelloWorld">Hello {props.name} World!</div>
+        <div className="HelloWorld" onClick={props.test}>Hello {props.name} World!</div>
     );
 }
 

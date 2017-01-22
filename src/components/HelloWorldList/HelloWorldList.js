@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import HelloWorldWithState from '../HelloWorldWithState/HelloWorldWithState';
+import HelloWorld from '../HelloWorld/HelloWorld';
 import AddGreeter from '../AddGreeter/AddGreeter';
 
 class HelloWorldList extends Component {
@@ -17,7 +18,7 @@ class HelloWorldList extends Component {
 
         this.addGreeting = this.addGreeting.bind(this);         // *
         this.removeGreeting = this.removeGreeting.bind(this);   // *
-
+        this.test = this.test.bind(this);
     }
 
     renderGreetings() {
@@ -46,11 +47,16 @@ class HelloWorldList extends Component {
         this.setState({ greetings: filteredGreetings });
     }
 
+    test() {
+        console.log("test");
+    }
+
     render() {
         return (
             <div>
                 <AddGreeter addGreeting={this.addGreeting} />
                 {this.renderGreetings()}
+                <HelloWorld test={this.test} />
             </div>
         );
     }

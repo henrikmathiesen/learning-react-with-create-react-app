@@ -14,7 +14,9 @@ class HelloWorldWithState extends Component {
         this.setState({ greeting: 'Bonjour' });
     }
 
-    removeGreeting(){
+    removeGreeting() {
+        // Could have run this.props.removeGreeting.bind(null, this.props.name) from the button in the render function, 
+        // but they say it can impact performance to use bind function in the render function
         this.props.removeGreeting(this.props.name);
     }
 
