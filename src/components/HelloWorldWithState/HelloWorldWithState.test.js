@@ -3,7 +3,7 @@ import { shallow } from 'enzyme';
 import renderer from 'react-test-renderer';
 import HelloWorldWithState from './HelloWorldWithState';
 
-// Can actually reference the component like this HelloWorldWithState (without quates) but this creates noise in test command prompt
+// Can actually reference the component like this HelloWorldWithState (without quotes) but this creates noise in test command prompt
 describe('HelloWorldWithState', () => {
 
     const name = 'Person';
