@@ -6,10 +6,20 @@ import HelloWorldList from './HelloWorldList';
 import AddGreeter from '../AddGreeter/AddGreeter';
 import HelloWorldWithState from '../HelloWorldWithState/HelloWorldWithState';
 
-describe('test', () => {
+describe('HelloWorldList', () => {
 
-    it('Should work', () => {
-        expect(true).toBe(true);
+    const component = shallow(
+        <HelloWorldList />
+    );
+
+    // 1) Write a generic snapshot test
+
+    it('Renders and matches our snapshot', () => {
+        const component = renderer.create(
+            <HelloWorldList />
+        );
+        const tree = component.toJSON();
+        expect(tree).toMatchSnapshot();
     });
 
 });
