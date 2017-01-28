@@ -5,8 +5,8 @@ import AddGreeter from '../AddGreeter/AddGreeter';
 
 class HelloWorldList extends Component {
 
-    constructor(props) {
-        super(props);
+    constructor() {
+        super();
 
         this.state = {
             greetings: [
@@ -69,3 +69,5 @@ export default HelloWorldList;
 
 // * We dont need to renderGreetings = renderGreetings.bind(this), since its not a callback from event.
 // * We need it on addGreeting and removeGreeting though, since it has a bind in the child component.
+
+// We removed props in the constructor since this component doesnt take props
