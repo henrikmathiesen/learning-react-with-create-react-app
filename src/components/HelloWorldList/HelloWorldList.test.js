@@ -22,4 +22,10 @@ describe('HelloWorldList', () => {
         expect(tree).toMatchSnapshot();
     });
 
+    // 2) Write some sub-component-specific tests (skip since we dont have any sub components)
+
+    it('contains an AddGreeter subcomponent', () => {
+        expect(component.find(AddGreeter)).toHaveLength(1); // test some jasmine syntax...
+    });
+
 });
