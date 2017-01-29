@@ -27,7 +27,7 @@ describe('HelloWorldList', () => {
 
     it('Contains an AddGreeter subcomponent', () => {
         expect(component.find(AddGreeter)).toHaveLength(1);
-        expect(component.find(HelloWorld).length).toBe(1);  // jasmine syntax works here also (toEqual also)
+        expect(component.find(HelloWorld).length).toBe(1);                          // jasmine syntax works here also (toEqual also)
     });
 
     it('Contains the same number of HelloWorldWithState as greetings', () => {
@@ -40,9 +40,17 @@ describe('HelloWorldList', () => {
 
     it('Adds another greeting when the add greeting function is called', () => {
         const before = component.find(HelloWorldWithState).length;
-        component.instance().addGreeting('Sample');
+        component.instance().addGreeting('Sample');                                   // Call a function on a component
         const after = component.find(HelloWorldWithState).length;
         expect(after).toBeGreaterThan(before);
+    });
+
+    it('Removes a greeting from the list when the remove greeting function is called', () => {
+        const before = component.find(HelloWorldWithState).length;
+        const removeMe = component.state('greetings')[0];
+        component.instance().removeGreeting(removeMe);
+        const after = component.find(HelloWorldWithState).length;
+        expect(after).toBeLessThan(before);
     });
 
 });
