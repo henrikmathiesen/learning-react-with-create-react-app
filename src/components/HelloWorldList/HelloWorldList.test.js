@@ -5,6 +5,7 @@ import renderer from 'react-test-renderer';
 import HelloWorldList from './HelloWorldList';
 import AddGreeter from '../AddGreeter/AddGreeter';
 import HelloWorldWithState from '../HelloWorldWithState/HelloWorldWithState';
+import HelloWorld from '../HelloWorld/HelloWorld';
 
 describe('HelloWorldList', () => {
 
@@ -25,7 +26,8 @@ describe('HelloWorldList', () => {
     // 2) Write some sub-component-specific tests
 
     it('contains an AddGreeter subcomponent', () => {
-        expect(component.find(AddGreeter)).toHaveLength(1); // test some jasmine syntax...
+        expect(component.find(AddGreeter)).toHaveLength(1);
+        expect(component.find(HelloWorld).length).toBe(1);  // jasmine syntax works here also (toEqual also)
     });
 
 });
