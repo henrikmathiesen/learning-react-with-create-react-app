@@ -23,11 +23,26 @@ describe('HelloWorldList', () => {
         expect(tree).toMatchSnapshot();
     });
 
-    // 2) Write some sub-component-specific tests
+    // 2) Write some sub-component-specific tests / check content
 
-    it('contains an AddGreeter subcomponent', () => {
+    it('Contains an AddGreeter subcomponent', () => {
         expect(component.find(AddGreeter)).toHaveLength(1);
         expect(component.find(HelloWorld).length).toBe(1);  // jasmine syntax works here also (toEqual also)
+    });
+
+    it('Contains the same number of HelloWorldWithState as greetings', () => {
+        const HelloWorldWithStates = component.find(HelloWorldWithState).length;
+        const greetings = component.state('greetings').length;
+        expect(HelloWorldWithStates).toEqual(greetings);
+    });
+
+    // 3) Check interactions
+
+    it('Adds another greeting when the add greeting function is called', () => {
+        const before = component.find(HelloWorldWithState).length;
+        component.instance().addGreeting('Sample');
+        const after = component.find(HelloWorldWithState).length;
+        expect(after).toBeGreaterThan(before);
     });
 
 });
