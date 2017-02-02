@@ -10,7 +10,7 @@ class ComponentLifeCycleClass extends Component {
 
     render() {
         return (
-            <div className="ComponentLifeCycle">Hi! Iam a Component, yes Iam.</div>
+            <div className="ComponentLifeCycle">{this.props.message}</div>
         );
     }
 

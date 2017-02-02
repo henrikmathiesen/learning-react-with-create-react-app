@@ -7,7 +7,7 @@ import './App.css';
 const App = () => {
     return(
         <div className="App">
-            <ComponentLifeCycleClass />
+            <ComponentLifeCycleClass message="The Component Lifecycle" />
             <HelloWorld name="JavaScript" />
             <HelloWorld name="React" />
             <HelloWorldList />
