@@ -1,11 +1,13 @@
 import React from 'react';
 import HelloWorldList from './HelloWorldList/HelloWorldList';
 import HelloWorld from './HelloWorld/HelloWorld';
+import ComponentLifeCycleClass from './ComponentLifeCycle/ComponentLifeCycleClass';
 import './App.css';
 
 const App = () => {
     return(
         <div className="App">
+            <ComponentLifeCycleClass />
             <HelloWorld name="JavaScript" />
             <HelloWorld name="React" />
             <HelloWorldList />
