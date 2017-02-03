@@ -35,7 +35,7 @@ class ComponentLifeCycleClass extends Component {
     // # UPDATING
 
     componentWillReceiveProps() {
-        console.log("Life cycle, UPDATING: componentWillReceiveProps");
+        console.log("Life cycle, UPDATING 0): componentWillReceiveProps");
     }
 
     shouldComponentUpdate() {
