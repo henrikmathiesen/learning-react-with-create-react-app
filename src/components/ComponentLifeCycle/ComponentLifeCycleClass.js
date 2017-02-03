@@ -8,15 +8,15 @@ class ComponentLifeCycleClass extends Component {
     constructor(props) {
         super(props);
         this.state = { foo: 'bar' };
-        console.log("Life cycle, Mounting 1): constructor");
+        console.log("Life cycle, MOUNTING 1): constructor");
     }
 
     componentWillMount() {
-        console.log("Life cycle, Mounting 2): componentWillMount");
+        console.log("Life cycle, MOUNTING 2): componentWillMount");
     }
 
     render() {
-        console.log("Life cycle, Mounting 3): Render");
+        console.log("Life cycle, MOUNTING/RENDER 3): Render");
 
         return (
             <div className="ComponentLifeCycle">{this.props.message}</div>
@@ -24,33 +24,33 @@ class ComponentLifeCycleClass extends Component {
     }
 
     componentDidMount() {
-        console.log("Life cycle, Mounting 4): componentDidMount");
+        console.log("Life cycle, MOUNTING 4): componentDidMount");
     }
 
     // # UPDATING
 
     componentWillReceiveProps() {
-        console.log("Life cycle, Updating: componentWillReceiveProps");
+        console.log("Life cycle, UPDATING: componentWillReceiveProps");
     }
 
     shouldComponentUpdate() {
-        console.log("Life cycle, Updating: shouldComponentUpdate");
+        console.log("Life cycle, UPDATING: shouldComponentUpdate");
     }
 
     componentWillUpdate() {
-        console.log("Life cycle, Updating: componentWillUpdate");
+        console.log("Life cycle, UPDATING: componentWillUpdate");
     }
 
     // render(){}
 
     componentDidUpdate() {
-        console.log("Life cycle, Updating: componentDidUpdate");
+        console.log("Life cycle, UPDATING: componentDidUpdate");
     }
 
     // # UNMOUNTING
 
     componentWillUnmount() { 
-        console.log("Life cycle, Unmounting: componentWillUnmount");
+        console.log("Life cycle, UNMOUNTING: componentWillUnmount");
     }
 }
 
