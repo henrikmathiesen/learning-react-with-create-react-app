@@ -1,13 +1,13 @@
 import React from 'react';
 import HelloWorldList from './HelloWorldList/HelloWorldList';
 import HelloWorld from './HelloWorld/HelloWorld';
-import ComponentLifeCycleClass from './ComponentLifeCycle/ComponentLifeCycleClass';
+import ComponentLifeCycleClassParent from './ComponentLifeCycle/ComponentLifeCycleClassParent';
 import './App.css';
 
 const App = () => {
     return(
         <div className="App">
-            <ComponentLifeCycleClass message="The Component Lifecycle" />
+            <ComponentLifeCycleClassParent />
             <HelloWorld name="JavaScript" />
             <HelloWorld name="React" />
             <HelloWorldList />

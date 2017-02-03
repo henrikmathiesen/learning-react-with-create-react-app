@@ -84,7 +84,8 @@ export default ComponentLifeCycleClass;
 // # UPDATING
 // An update can be caused by changes to props or state. These methods are called when a component is being re-rendered
 
-// Non of the Updating functions were called on the initial "load"
+// - Non of the Updating functions were called on the initial "load"
+// - All the functions, including render, are called when we change state, even though we do not use state in the JSX
 
 // # UNMOUNTING
 // This method is called when a component is being removed from the DOM
