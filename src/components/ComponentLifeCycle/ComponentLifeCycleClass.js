@@ -3,11 +3,16 @@ import './ComponentLifeCycle.css';
 
 class ComponentLifeCycleClass extends Component {
 
+    changeState() {
+        this.setState({ foo: 'baz' });
+    }
+
     // # MOUNTING
 
     constructor(props) {
         super(props);
         this.state = { foo: 'bar' };
+        this.changeState = this.changeState.bind(this);
         console.log("Life cycle, MOUNTING 1): constructor");
     }
 
@@ -19,7 +24,7 @@ class ComponentLifeCycleClass extends Component {
         console.log("Life cycle, MOUNTING/RENDER 3): Render");
 
         return (
-            <div className="ComponentLifeCycle">{this.props.message}</div>
+            <div className="ComponentLifeCycle" onClick={this.changeState}>{this.props.message}</div>
         );
     }
 
@@ -34,22 +39,23 @@ class ComponentLifeCycleClass extends Component {
     }
 
     shouldComponentUpdate() {
-        console.log("Life cycle, UPDATING: shouldComponentUpdate");
+        console.log("Life cycle, UPDATING 1): shouldComponentUpdate");
+        return true; // We can decide if we should continue with the update by returning a boolean here
     }
 
     componentWillUpdate() {
-        console.log("Life cycle, UPDATING: componentWillUpdate");
+        console.log("Life cycle, UPDATING 2): componentWillUpdate");
     }
 
-    // render(){}
+    // render(){} UPDATING 3
 
     componentDidUpdate() {
-        console.log("Life cycle, UPDATING: componentDidUpdate");
+        console.log("Life cycle, UPDATING 4): componentDidUpdate");
     }
 
     // # UNMOUNTING
 
-    componentWillUnmount() { 
+    componentWillUnmount() {
         console.log("Life cycle, UNMOUNTING: componentWillUnmount");
     }
 }
