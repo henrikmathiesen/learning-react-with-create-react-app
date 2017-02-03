@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './ComponentLifeCycle.css';
+import './ComponentLifeCycleClass.css';
 
 class ComponentLifeCycleClass extends Component {
 
@@ -24,7 +24,7 @@ class ComponentLifeCycleClass extends Component {
         console.log("Life cycle, MOUNTING/RENDER 3): Render");
 
         return (
-            <div className="ComponentLifeCycle" onClick={this.changeState}>{this.props.message}</div>
+            <div className="ComponentLifeCycleClass" onClick={this.changeState}>{this.props.message}</div>
         );
     }
 
