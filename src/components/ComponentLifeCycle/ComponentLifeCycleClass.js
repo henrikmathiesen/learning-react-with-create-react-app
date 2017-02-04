@@ -26,7 +26,7 @@ class ComponentLifeCycleClass extends Component {
         console.log("Life cycle, MOUNTING/RENDER 3): Render");
 
         return (
-            <div className="ComponentLifeCycleClass" onClick={this.changeState}>{this.props.message}</div>
+            <div className="ComponentLifeCycleClass" onClick={this.changeState}>{this.props.message} {this.props.messageToo}</div>
         );
     }
 
@@ -61,6 +61,13 @@ class ComponentLifeCycleClass extends Component {
         console.log("Life cycle, UNMOUNTING: componentWillUnmount");
     }
 }
+
+ComponentLifeCycleClass.defaultProps = {
+    message: 'The default message if not provided, providing a null value will set it to null though',
+    messageToo: 'Yeah!'
+}
+
+ComponentLifeCycleClass.displayName = "Used in debugging messages, JSX set it to a default string";
 
 export default ComponentLifeCycleClass;
 
