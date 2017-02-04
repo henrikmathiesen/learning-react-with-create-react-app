@@ -62,12 +62,20 @@ class ComponentLifeCycleClass extends Component {
     }
 }
 
+// # CLASS PROPERTIES
+
 ComponentLifeCycleClass.defaultProps = {
     message: 'The default message if not provided, providing a null value will set it to null though',
     messageToo: 'Yeah!'
 }
 
 ComponentLifeCycleClass.displayName = "Used in debugging messages, JSX set it to a default string";
+
+// Run time type checking, used when app runs in debug mode
+ComponentLifeCycleClass.propTypes = {
+    message: React.PropTypes.string.isRequired,
+    messageToo: React.PropTypes.string.isRequired // required is fullfilled via defaultProps
+};
 
 export default ComponentLifeCycleClass;
 
