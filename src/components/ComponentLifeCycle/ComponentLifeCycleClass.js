@@ -13,7 +13,7 @@ class ComponentLifeCycleClass extends Component {
 
     constructor(props) {
         super(props);
-        this.state = { foo: 'bar' };
+        this.state = { foo: 'bar' }; // "If you don't use it in render(), it shouldn't be on the state. For example, you can put timer IDs directly on the instance."
         this.changeState = this.changeState.bind(this);
         console.log("Life cycle, MOUNTING 1): constructor");
     }
@@ -26,7 +26,7 @@ class ComponentLifeCycleClass extends Component {
         console.log("Life cycle, MOUNTING/RENDER 3): Render");
 
         return (
-            <div className="ComponentLifeCycleClass" onClick={this.changeState}>{this.props.message} {this.props.messageToo}</div>
+            <div className="ComponentLifeCycleClass" onClick={this.changeState}>{this.props.message} {this.props.messageToo} {this.state.foo}</div>
         );
     }
 
