@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ComponentLifeCycleClass from './ComponentLifeCycleClass';
+import ComponentLifeCycleFunc from './ComponentLifeCycleFunc';
 import './ComponentLifeCycleClassParent.css';
 
 class ComponentLifeCycleClassParent extends Component {
@@ -25,6 +26,7 @@ class ComponentLifeCycleClassParent extends Component {
                 <div onClick={this.changeMessage}>Change Message</div>
                 <div onClick={this.unmountChild}>Unmount dat child</div>
                 {this.state.renderChild ? <ComponentLifeCycleClass message={this.state.message} /> : null}
+                <ComponentLifeCycleFunc />
             </div>
         );
     }
