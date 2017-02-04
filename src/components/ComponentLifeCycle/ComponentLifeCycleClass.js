@@ -26,12 +26,18 @@ class ComponentLifeCycleClass extends Component {
         console.log("Life cycle, MOUNTING/RENDER 3): Render");
 
         return (
-            <div className="ComponentLifeCycleClass" onClick={this.changeState}>{this.props.message} {this.props.messageToo} {this.state.foo}</div>
+            <div className="ComponentLifeCycleClass">
+                <div onClick={this.changeState}>{this.props.message} {this.props.messageToo} {this.state.foo}</div>
+                <div>
+                    <input type="text" ref={(input) => { this.textInput = input; }} />
+                </div>
+            </div>
         );
     }
 
     componentDidMount() {
         console.log("Life cycle, MOUNTING 4): componentDidMount");
+        this.textInput.focus();
     }
 
     // # UPDATING
