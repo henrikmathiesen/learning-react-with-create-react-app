@@ -16,3 +16,5 @@ ComponentLifeCycleFunc.propTypes = {
 };
 
 export default ComponentLifeCycleFunc;
+
+// "There are currently no special optimizations done for component functions, although we might add such optimizations in the future. But for now, they perform exactly as classes.""
