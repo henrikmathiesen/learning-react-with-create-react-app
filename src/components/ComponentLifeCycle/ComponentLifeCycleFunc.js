@@ -7,4 +7,12 @@ const ComponentLifeCycleFunc = props => {
     );
 }
 
+ComponentLifeCycleFunc.defaultProps = {
+    foo: 'bar'
+};
+
+ComponentLifeCycleFunc.propTypes = {
+    foo: React.PropTypes.string.isRequired
+};
+
 export default ComponentLifeCycleFunc;
