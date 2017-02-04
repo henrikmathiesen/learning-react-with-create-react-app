@@ -4,7 +4,9 @@ import './ComponentLifeCycleClass.css';
 class ComponentLifeCycleClass extends Component {
 
     changeState() {
-        this.setState({ foo: 'baz' });
+        this.setState({ foo: 'baz' }, () => {
+            console.log("state change callback, but use componentDidUpdate() instead");
+        });
     }
 
     // # MOUNTING
@@ -34,23 +36,23 @@ class ComponentLifeCycleClass extends Component {
 
     // # UPDATING
 
-    componentWillReceiveProps() {
-        console.log("Life cycle, UPDATING 0): componentWillReceiveProps");
+    componentWillReceiveProps(nextProps) {
+        console.log("Life cycle, UPDATING 0): componentWillReceiveProps", nextProps);
     }
 
-    shouldComponentUpdate() {
-        console.log("Life cycle, UPDATING 1): shouldComponentUpdate");
+    shouldComponentUpdate(nextProps, nextState) {
+        console.log("Life cycle, UPDATING 1): shouldComponentUpdate", { nextProps, nextState });
         return true; // We can decide if we should continue with the update by returning a boolean here
     }
 
-    componentWillUpdate() {
-        console.log("Life cycle, UPDATING 2): componentWillUpdate");
+    componentWillUpdate(nextProps, nextState) {
+        console.log("Life cycle, UPDATING 2): componentWillUpdate", { nextProps, nextState });
     }
 
     // render(){} UPDATING 3
 
-    componentDidUpdate() {
-        console.log("Life cycle, UPDATING 4): componentDidUpdate");
+    componentDidUpdate(prevProps, prevState) {
+        console.log("Life cycle, UPDATING 4): componentDidUpdate", { prevProps, prevState });
     }
 
     // # UNMOUNTING
@@ -73,10 +75,12 @@ export default ComponentLifeCycleClass;
 // - "Rarely useful"
 // - "ES6 class constructor is equivalent of componentWillMount"
 // - "There is talk about removing componentWillMount from class components since it serves the same purpose as the constructor."
+// - "Generally, we recommend using the constructor() instead."
 
 // componentDidMount
 // - "If your initialization depends upon the DOM, use componentDidMount, otherwise use constructor"
 // - "Make ajax calls in this life cycle hook"
+// - "Setting state in this method will trigger a re-rendering"
 
 // http://stackoverflow.com/questions/29899116/what-is-the-difference-between-componentwillmount-and-componentdidmount-in-react
 // http://stackoverflow.com/questions/27139366/why-do-the-react-docs-recommend-doing-ajax-in-componentdidmount-not-componentwi
@@ -86,6 +90,17 @@ export default ComponentLifeCycleClass;
 
 // - Non of the Updating functions were called on the initial "load"
 // - All the functions, including render, are called when we change state, even though we do not use state in the JSX
+// - Note that you cannot call this.setState() in componentWillUpdate(). If you need to update state in response to a prop change, use componentWillReceiveProps() instead.
+
+// componentDidUpdate: 
+// - Use this as an opportunity to operate on the DOM when the component has been updated. 
+// - This is also a good place to do network requests as long as you compare the current props to previous props 
+// - (e.g. a network request may not be necessary if the props have not changed).
+
+// componentWillUnmount
+// - is invoked immediately before a component is unmounted and destroyed. 
+// - Perform any necessary cleanup in this method, such as invalidating timers, 
+// - canceling network requests, or cleaning up any DOM elements that were created in componentDidMount
 
 // # UNMOUNTING
 // This method is called when a component is being removed from the DOM
