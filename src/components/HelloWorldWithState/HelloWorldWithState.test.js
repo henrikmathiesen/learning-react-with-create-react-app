@@ -6,6 +6,13 @@ import HelloWorldWithState from './HelloWorldWithState';
 // Can actually reference the component like this HelloWorldWithState (without quotes) but this creates noise in test command prompt
 describe('HelloWorldWithState', () => {
 
+    beforeAll(() => {
+        // If console gives error, test fails
+        console.error = error => {
+            throw new Error(error);
+        };
+    });
+
     const name = 'Person';
     const mockRemoveGreeting = jest.fn();
     const component = shallow(

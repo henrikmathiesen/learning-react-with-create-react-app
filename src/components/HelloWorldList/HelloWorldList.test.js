@@ -9,6 +9,13 @@ import HelloWorld from '../HelloWorld/HelloWorld';
 
 describe('HelloWorldList', () => {
 
+    beforeAll(() => {
+        // If console gives error, test fails
+        console.error = error => {
+            throw new Error(error);
+        };
+    });
+
     const component = shallow(
         <HelloWorldList />
     );

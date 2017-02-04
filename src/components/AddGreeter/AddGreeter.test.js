@@ -5,6 +5,13 @@ import AddGreeter from './AddGreeter';
 
 describe('AddGreeter', () => {
 
+    beforeAll(() => {
+        // If console gives error, test fails
+        console.error = error => {
+            throw new Error(error);
+        };
+    });
+
     const mockAddGreeting = jest.fn();
     const component = shallow(
         <AddGreeter addGreeting={mockAddGreeting} />
