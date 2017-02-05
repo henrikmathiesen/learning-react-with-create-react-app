@@ -32,4 +32,5 @@ describe('HelloWorld', () => {
 
 // ##############################################################################################################
 // "Using Enzyme gives you the same functionality as ReactTestUtils but with much cleaner, simpler commands"
+// - https://medium.com/@malinnaleach/testing-react-a-beginners-guide-755a8828c222#.1bcemeuvl
 // ##############################################################################################################

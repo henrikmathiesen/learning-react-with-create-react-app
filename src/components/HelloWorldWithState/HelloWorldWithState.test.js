@@ -63,6 +63,7 @@ describe('HelloWorldWithState', () => {
 // - Also mimicking jQuery's API for DOM manipulation and traversal
 // - Seems more easy to use than react-addons-test-utils
 // - "Using Enzyme gives you the same functionality as ReactTestUtils but with much cleaner, simpler commands"
+// - https://medium.com/@malinnaleach/testing-react-a-beginners-guide-755a8828c222#.1bcemeuvl
 
 // react-addons-test-utils
 // - enzyme requires this package
