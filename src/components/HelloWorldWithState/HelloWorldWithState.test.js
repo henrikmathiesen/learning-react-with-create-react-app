@@ -19,7 +19,7 @@ describe('HelloWorldWithState', () => {
         <HelloWorldWithState name={name} removeGreeting={mockRemoveGreeting} />
     );
 
-    // 1) Write a generic snapshot test
+    // 1) Write a generic snapshot test (these are not shallow, if we look at the snapshot of a component that has children (HelloWorldList for example) we can see that)
 
     it('Renders and matches our snapshot', () => {
         const component = renderer.create(
