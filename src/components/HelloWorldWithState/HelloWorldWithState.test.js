@@ -64,6 +64,7 @@ describe('HelloWorldWithState', () => {
 
 // react-addons-test-utils
 // - enzyme requires this package
+// - It has its own test api, see HelloWorld.test.js
 
 // snapshot testing: https://facebook.github.io/jest/blog/2016/07/27/jest-14.html
 // press u in test runner to update snap shot if change was intentional
