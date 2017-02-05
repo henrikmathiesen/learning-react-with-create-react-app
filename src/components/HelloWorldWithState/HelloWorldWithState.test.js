@@ -13,6 +13,7 @@ describe('HelloWorldWithState', () => {
         };
     });
 
+    // Set up a shallow rendered component with enzyme api
     const name = 'Person';
     const mockRemoveGreeting = jest.fn();
     const component = shallow(
