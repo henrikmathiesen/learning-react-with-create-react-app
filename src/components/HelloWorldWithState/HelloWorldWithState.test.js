@@ -62,6 +62,7 @@ describe('HelloWorldWithState', () => {
 // - More flexibility, like shallow rendering (test components in isolation without children), although react-addons-test-utils also has this
 // - Also mimicking jQuery's API for DOM manipulation and traversal
 // - Seems more easy to use than react-addons-test-utils
+// - "Using Enzyme gives you the same functionality as ReactTestUtils but with much cleaner, simpler commands"
 
 // react-addons-test-utils
 // - enzyme requires this package

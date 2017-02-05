@@ -29,3 +29,7 @@ describe('HelloWorld', () => {
 // - With enzyme in HelloWorldWithState.test we can NOT do this expect(component.props.children).toContain('Person'); , we can not do it with shallow rendering
 // - BUT we can do it with deep rendering using enzyme, see test 2
 // - With ReactTestUtils here, we can NOT query DOM like this expect(result.text()).toContain('Person');
+
+// ##############################################################################################################
+// "Using Enzyme gives you the same functionality as ReactTestUtils but with much cleaner, simpler commands"
+// ##############################################################################################################
