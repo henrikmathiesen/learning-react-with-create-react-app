@@ -59,8 +59,9 @@ describe('HelloWorldWithState', () => {
 // - We can create a JSON from it and make a snapshot for snapshot testing
 
 // enzyme
-// - More flexibility, like shallow rendering (test components in isolation without children)
+// - More flexibility, like shallow rendering (test components in isolation without children), although react-addons-test-utils also has this
 // - Also mimicking jQuery's API for DOM manipulation and traversal
+// - Seems more easy to use than react-addons-test-utils
 
 // react-addons-test-utils
 // - enzyme requires this package

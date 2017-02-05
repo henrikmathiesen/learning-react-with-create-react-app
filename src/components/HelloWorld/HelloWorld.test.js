@@ -8,9 +8,11 @@ describe('HelloWorld', () => {
     const name = 'Person';
 
     it('Renders with correct text', () => {
+        // Shallow rendering
         const renderer = ReactTestUtils.createRenderer();
         renderer.render(<HelloWorld name={name} />);
         const result = renderer.getRenderOutput();
+        
         expect(result.props.children).toContain('Person');
     });
 
