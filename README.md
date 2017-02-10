@@ -7,6 +7,6 @@ https://medium.com/@diamondgfx/learning-react-with-create-react-app-part-3-32244
 https://medium.com/@diamondgfx/learning-react-with-create-react-app-part-4-9f843c8c1ccc#.ieheq3u4w  
 https://medium.com/@malinnaleach/testing-react-a-beginners-guide-755a8828c222#.qm2mm5ghv  
 https://camjackson.net/post/9-things-every-reactjs-beginner-should-know  
-https://facebook.github.io/react/docs/react-component.html
-https://facebook.github.io/react/docs/refs-and-the-dom.html
+https://facebook.github.io/react/docs/react-component.html  
+https://facebook.github.io/react/docs/refs-and-the-dom.html  
 https://www.codementor.io/vijayst/unit-testing-react-components-jest-or-enzyme-du1087lh8
