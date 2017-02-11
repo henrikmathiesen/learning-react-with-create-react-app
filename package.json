@@ -3,8 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
+    "concurrently": "3.2.0",
     "enzyme": "2.7.0",
     "node-sass": "4.5.0",
+    "onchange": "3.2.1",
     "react-addons-test-utils": "15.4.2",
     "react-scripts": "0.8.5",
     "react-test-renderer": "15.4.2"
@@ -14,10 +16,11 @@
     "react-dom": "15.4.2"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "npm run sass:dev && concurrently \"npm run sass:watch\" \"react-scripts start\"",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "sass:dev": "node-sass src/ -o src/"
+    "sass:dev": "node-sass src/ -o src/",
+    "sass:watch": "node-sass -w src/ -o src/"
   }
 }
