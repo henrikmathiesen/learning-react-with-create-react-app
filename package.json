@@ -16,11 +16,10 @@
     "react-dom": "15.4.2"
   },
   "scripts": {
-    "start": "npm run sass:dev && concurrently \"npm run sass:watch\" \"react-scripts start\"",
-    "build": "react-scripts build",
+    "start": "npm run sass && concurrently \"npm run sass:watch\" \"react-scripts start\"",
+    "build": "npm run sass && react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject",
-    "sass:dev": "node-sass src/ -o src/",
+    "sass": "node-sass src/ -o src/",
     "sass:watch": "onchange \"src/**/*.scss\" -- npm run sass:dev"
   }
 }
