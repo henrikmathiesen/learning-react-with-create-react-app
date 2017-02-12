@@ -23,4 +23,4 @@ export default App;
 // Here we use the functional style for the component, instead of classes,
 // this is preferable when the component is focused on presentation rather than state and logic.
 // The App Component renders 2 HelloWorld components, sending in arguments as props.
-// The App Component also renders 1 HelloWorldList
+// The App Component also renders 1 HelloWorldList.

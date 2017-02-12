@@ -3,12 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
-    "autoprefixer": "6.7.2",
     "concurrently": "3.2.0",
     "enzyme": "2.7.0",
     "node-sass": "4.5.0",
     "onchange": "3.2.1",
-    "postcss-cli": "2.6.0",
     "react-addons-test-utils": "15.4.2",
     "react-scripts": "0.8.5",
     "react-test-renderer": "15.4.2"
@@ -20,9 +18,8 @@
   "scripts": {
     "start": "npm run sass && concurrently \"npm run sass:watch\" \"react-scripts start\"",
     "build": "npm run sass && react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "sass": "node-sass src/ -o src/ && npm run postcss",
+    "sass": "node-sass src/ -o src/",
     "sass:watch": "onchange \"src/**/*.scss\" -- npm run sass",
-    "postcss": "postcss -u autoprefixer --autoprefixer.browsers \"last 3 versions\" -r src/**/*.css"
+    "test": "react-scripts test --env=jsdom"
   }
 }
