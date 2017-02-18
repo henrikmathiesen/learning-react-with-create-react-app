@@ -2,6 +2,7 @@ import React from 'react';
 import HelloWorldList from './HelloWorldList/HelloWorldList';
 import HelloWorld from './HelloWorld/HelloWorld';
 import ComponentLifeCycleClassParent from './ComponentLifeCycle/ComponentLifeCycleClassParent';
+import FancyContent from './Composition/FancyContent';
 import './App.css';
 
 const App = () => {
@@ -11,6 +12,8 @@ const App = () => {
             <HelloWorld name="JavaScript" />
             <HelloWorld name="React" />
             <HelloWorldList />
+            <FancyContent color="river" />
+            <FancyContent color="emerald" />
         </div>
     );
 }

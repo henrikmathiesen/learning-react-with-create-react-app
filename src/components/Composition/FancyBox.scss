@@ -1,0 +1,14 @@
+@import '../../_settings';
+
+.FancyBox {
+    margin: $gutter-md;
+    padding: $gutter-md;
+}
+
+.FancyBox-emerald {
+    background-color: $emerald;
+}
+
+.FancyBox-river {
+    background-color: $river;
+}
