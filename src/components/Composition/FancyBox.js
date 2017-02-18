@@ -2,7 +2,7 @@ import React from 'react';
 import './FancyBox.css';
 
 // https://facebook.github.io/react/docs/composition-vs-inheritance.html
-// See also: https://facebook.github.io/react/docs/composition-vs-inheritance.html#specialization
+// Also Note {props.left} {props.right} in SplitPane example
 
 
 const FancyBox = props => {
