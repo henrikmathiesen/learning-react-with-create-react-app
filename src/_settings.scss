@@ -1,6 +1,9 @@
 /*
 
-    NOTE: If using 3party libraries, it could be a good idea to prefix variables (and CSS classes), so they dont conflict
+    NOTES
+    - If using 3party libraries, it could be a good idea to prefix variables (and CSS classes), so they dont conflict
+    - The docs are a little bit against going heavy on SASS architecture, they say that with the right React workflow it is not needed
+        * https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md#adding-a-css-preprocessor-sass-less-etc
 
 */
 
