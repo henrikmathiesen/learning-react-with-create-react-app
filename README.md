@@ -9,7 +9,8 @@ https://medium.com/@malinnaleach/testing-react-a-beginners-guide-755a8828c222#.q
 https://camjackson.net/post/9-things-every-reactjs-beginner-should-know  
 https://facebook.github.io/react/docs/react-component.html  
 https://facebook.github.io/react/docs/refs-and-the-dom.html  
-https://www.codementor.io/vijayst/unit-testing-react-components-jest-or-enzyme-du1087lh8
+https://www.codementor.io/vijayst/unit-testing-react-components-jest-or-enzyme-du1087lh8  
+https://facebook.github.io/react/docs/composition-vs-inheritance.html
 
 Adding a SASS compiler to the create-react-app workflow (vendor prefixes are added with build script on the generated CSS):  
 https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md#adding-a-css-preprocessor-sass-less-etc  
