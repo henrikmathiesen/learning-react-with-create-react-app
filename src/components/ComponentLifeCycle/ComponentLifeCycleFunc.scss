@@ -1,8 +1,10 @@
+@import '../../_settings';
+
 .ComponentLifeCycleFunc {
-    border: 2px solid black;
+    border: 2px solid $black;
     text-align: center;
-    background: #f39c12;
-    color: #333;
+    background: $orange;
+    color: $almost-black;
     margin: 20px;
     padding: 20px;
 }

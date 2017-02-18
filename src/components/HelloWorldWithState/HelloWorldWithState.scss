@@ -1,8 +1,10 @@
+@import '../../_settings';
+
 .HelloWorldWithState {
-    border: 2px solid black;
+    border: 2px solid $black;
     text-align: center;
-    background: #3498db;
-    color: #333;
+    background: $river;
+    color: $almost-black;
     margin: 20px;
     padding: 20px;
 }

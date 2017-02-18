@@ -1,5 +1,7 @@
+// dont need to import _settings since parent sass file has it imported
+
 .HelloWorldWithState {
-    color:gold;
+    color:$sun-flower;
 }
 
 .testing {

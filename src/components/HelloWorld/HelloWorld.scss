@@ -1,8 +1,10 @@
+@import '../../_settings';
+
 .HelloWorld {
-    border: 2px solid black;
+    border: 2px solid $black;
     text-align: center;
-    background: #2ecc71;
-    color: #333;
+    background: $emerald;
+    color: $almost-black;
     margin: 20px;
     padding: 20px;
 }
