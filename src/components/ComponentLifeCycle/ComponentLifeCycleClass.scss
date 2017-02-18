@@ -1,10 +1,10 @@
 @import '../../_settings';
 
 .ComponentLifeCycleClass {
-    border: 2px solid $black;
+    border: $component-border;
     text-align: center;
     background: $sun-flower;
     color: $almost-black;
-    margin: 20px;
-    padding: 20px;
+    margin: $gutter-md;
+    padding: $gutter-md;
 }

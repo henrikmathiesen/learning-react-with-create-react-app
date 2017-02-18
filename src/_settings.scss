@@ -1,3 +1,10 @@
+/*
+
+    NOTE: If using 3party libraries, it could be a good idea to prefix variables (and CSS classes), so they dont conflict
+
+*/
+
+
 // COLORS (https://flatuicolors.com/)
 
 $black: #000;
@@ -14,3 +21,9 @@ $river: #3498db;
 // SIZES
 
 $site-max-width: 960px;
+$gutter-md: 20px;
+
+//
+// STYLES
+
+$component-border: 2px solid $black;

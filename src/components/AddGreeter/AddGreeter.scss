@@ -1,10 +1,10 @@
 @import '../../_settings';
 
 .AddGreeter {
-    border: 2px solid $black;
+    border: $component-border;
     text-align: center;
     background: $belize-blue;
     color: $almost-black;
-    margin: 20px;
-    padding: 20px;
+    margin: $gutter-md;
+    padding: $gutter-md;
 }
