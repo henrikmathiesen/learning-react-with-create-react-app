@@ -23,6 +23,7 @@
     "test": "react-scripts test --env=jsdom",
     "Comment-A": "https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md#adding-a-css-preprocessor-sass-less-etc",
     "Comment-B": "We could have used the above aproach for SASS compiling, but newly created files wont be compiled by watcher (need restart)",
-    "Comment-C": "The drawback with the approach we currently use is however that ALL SASS files gets compiled if ONE changes"
+    "Comment-C": "The drawback with the approach we currently use is however that ALL SASS files gets compiled if ONE changes",
+    "Comment-D": "React build job does not strip console nor debugger, hard to do for us on the hashed js file(?)"
   }
 }
