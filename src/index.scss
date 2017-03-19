@@ -6,3 +6,20 @@ body {
   font-family: sans-serif;
   background-color: $clouds;
 }
+
+//
+// Testing SASS extend
+
+.button {
+  padding: $gutter-md;
+  background-color: $clouds;
+}
+
+.button-success {
+  @extend .button;
+  background-color: $emerald;
+}
+
+// LESS extend
+// http://lesscss.org/features/#extend-feature
+// http://stackoverflow.com/questions/15464982/does-less-have-an-extend-feature
