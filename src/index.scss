@@ -8,11 +8,18 @@ body {
 }
 
 //
-// Testing SASS extend
+// Testing SASS extend and mixin
+
+@mixin cool-border() {
+  border-color: green;
+  border-width: 2px;
+  border-style: dashed;
+}
 
 .button {
   padding: $gutter-md;
   background-color: $clouds;
+  @include cool-border();
 }
 
 .button-success {
@@ -23,3 +30,12 @@ body {
 // LESS extend
 // http://lesscss.org/features/#extend-feature
 // http://stackoverflow.com/questions/15464982/does-less-have-an-extend-feature
+
+// There are arguments for using mixins instead of extend
+// https://www.sitepoint.com/avoid-sass-extend/
+
+// "Extend is often a code smell"
+// https://csswizardry.com/2017/02/code-smells-in-css-revisited/
+
+// http://sass-lang.com/documentation/file.SASS_REFERENCE.html#mixins
+// http://lesscss.org/features/#mixins-feature (use "Not Outputting the Mixin")
