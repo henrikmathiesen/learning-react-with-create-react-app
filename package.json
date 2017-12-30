@@ -16,7 +16,6 @@
     "react-dom": "15.4.2"
   },
   "scripts": {
-    "foo": "react-scripts start",
     "start": "npm run sass && concurrently \"npm run sass:watch\" \"react-scripts start\"",
     "build": "npm run sass && react-scripts build",
     "sass": "node-sass src/ -o src/",
